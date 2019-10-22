@@ -1,0 +1,1 @@
+http://www.devfuria.com.br/php/enviando-dados-via-get-post/
