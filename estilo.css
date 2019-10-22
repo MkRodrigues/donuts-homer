@@ -1,0 +1,51 @@
+/* ---------->>> RESET <<<-----------*/
+
+body, h1, h2, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li, a {
+    text-decoration: none;
+}
+
+/* ---------->>> BODY <<<-----------*/
+
+/* ---------->>> ESTRUTURA <<<-----------*/
+
+.estrutura {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-areas:  
+    "barra barra"
+    "header main"
+    "footer footer";
+}
+
+.barra {
+    grid-area: barra;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* ---------->>> MENU <<<-----------*/
+
+
+
