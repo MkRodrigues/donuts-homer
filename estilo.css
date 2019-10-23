@@ -26,7 +26,7 @@ li, a {
     grid-template-areas:  
     "barra barra"
     "header main"
-    "footer footer";
+    "header main";
 }
 
 .barra {
@@ -39,10 +39,6 @@ li, a {
 
 .main {
     grid-area: main;
-}
-
-.footer {
-    grid-area: footer;
 }
 
 /* ---------->>> MENU <<<-----------*/
