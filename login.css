@@ -53,10 +53,10 @@ body, html {
 
 .nomeEmpresa {
   color: #FFF;
-  font-family: 'Kalam', cursive;
   font-size: 3.5em;
   width: 350px;
   text-align: center;
+  font-family: 'Rock Salt', cursive;
 }
 
 /* ---------->>> FORMULÁRIO <<<-----------*/
@@ -93,13 +93,15 @@ img{
 } 
 
 .format {
-  font-family: 'Kalam', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
   font-size: 1.2em;
   color: white;
 }
 
 .inserir {
-  font-family: 'Kalam', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
   font-size: 1.5em;
   padding: 10px;
   text-align: center;
@@ -114,7 +116,6 @@ img{
 .btn {
   display: block;
   width: 90px;
-  font-family: 'Kalam', cursive;
   text-decoration: none;
   color: rgb(0, 0, 0);
   border-radius: 8px;
@@ -127,7 +128,8 @@ img{
   border: none;
   cursor: pointer;
   align-self: flex-end;
-  /* margin-top: 5px; */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
 }
 
@@ -135,6 +137,7 @@ img{
 
 
 .footer-bg {
+  font-family: 'Ubuntu', sans-serif;
   display: flex;
   position: absolute;
   bottom: 0px;
