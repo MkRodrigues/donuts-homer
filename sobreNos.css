@@ -1,14 +1,45 @@
 @import url(estilo.css);
 
-.barra {
-    background: #ffc;
+/* ---------->>> MENU <<<-----------*/
+
+.header-bg {
+    display: flex;
+    background: #3AA;
+    position: fixed;
+    width: 130px;
+    height: 100%;
+    justify-content: center;
 }
 
-.header {
-    background: #3aa;
-}
-.main {
-    background: white;
+.menu-lateral {
+    display: flex;
+    position: fixed;
+    top: 80px;
 }
 
-/* ---------->>> RESET <<<-----------*/
+.menu-ul {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.menu-ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 0;
+    color: white; 
+    text-align: center;
+}
+
+.icone {
+    display: flex;
+    padding: 8px 0;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}

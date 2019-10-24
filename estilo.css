@@ -47,7 +47,7 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     grid-template-areas:  
     "barra barra"
     "header main"
-    "footer footer";
+    "header footer";
 }
 
 .barra {
