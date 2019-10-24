@@ -1,14 +1,16 @@
 @import url(estilo.css);
 
-.barra {
-    background: #ffc;
+
+body{
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.header {
-    background: #3aa;
-}
+
+
+/* ---------->>> MAIN <<<-----------*/
+
 .main {
-    background: white;
+    position: absolute;
+    top: 140px;
+    left: 170px;
 }
-
-/* ---------->>> RESET <<<-----------*/

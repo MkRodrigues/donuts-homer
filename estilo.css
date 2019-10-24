@@ -47,7 +47,7 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     grid-template-areas:  
     "barra barra"
     "header main"
-    "footer footer";
+    "header footer";
 }
 
 .barra {
@@ -66,12 +66,9 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     grid-area: footer;
 }
 
-/* ---------->>> MENU <<<-----------*/
 
-.barra-supBg {
-    display: flex;
-    justify-content: space-between;
-}
+
+/* ---------->>> BARRA SUPERIOR <<<-----------*/
 
 .logo a {
     display: flex;
@@ -84,6 +81,88 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     font-size: 1.5em;
     text-align: center;
     margin: 0 auto;
+    justify-content: center;
+}
+
+.barra-superBg {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: rgb(245, 242, 242);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-family: 'Rock Salt', cursive;
+    padding: 0 15px;
+
+}
+
+.barra-info {
+    display: flex;
+}
+
+.barra-info h2 {
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.icone-barra {
+    padding: 0 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ---------->>> MENU <<<-----------*/
+
+.header-bg {
+    display: flex;
+    background: #3AA;
+    position: fixed;
+    width: 130px;
+    height: 100%;
+    justify-content: center;
+}
+
+.menu-lateral {
+    display: flex;
+    position: fixed;
+    top: 80px;
+}
+
+.menu-ul {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.menu-ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 0;
+    color: white; 
+    text-align: center;
+}
+
+.icone {
+    display: flex;
+    padding: 8px 0;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.menu-ul li a:hover {
+    width: 130px;
+    background: rgb(241, 150, 184);
 }
 
 /* ---------->>> FOOTER <<<-----------*/
@@ -91,3 +170,4 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 .footer-bg {
     background: #cff;
 }
+
