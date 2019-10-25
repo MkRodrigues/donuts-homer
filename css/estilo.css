@@ -106,8 +106,9 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 }
 
 .barra-info h2 {
-    font-size: 1em;
+    font-size: .85em;
     padding: 0 10px;
+    font-weight: 300;
 }
 
 .icone-barra {
