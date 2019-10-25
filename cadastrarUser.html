@@ -5,35 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
     <title>O Donuts do Homer - Cadastrar Usuário</title>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Ubuntu:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cadastrarUser.css" />
 </head>
 
-<body>
+<body class="estrutura">
 
-    <div class="barra-supBg">
-        <div class="barra-info">
-            <h1>O Donuts do Homer</h1>
-            <h2>Nome do Usuário</h2>
-            <a href="">Sair</a> <!-- colocar uma imagem como link -->
+    <div class="barra barra-superBg">
+
+        <div class="logo">
+            <a href="#">
+                <h1>O Donuts do Homer</h1>
+            </a>
         </div>
+
+        <div class="barra-info">
+            <h2>Nome do Usuário</h2>
+            <a href=""><img class="icone-barra" src="image/exit.png" alt=""></a> <!-- colocar uma imagem como link -->
+        </div>
+
     </div>
 
-    <header>
+    <header class="header header-bg">
         <nav class="menu-lateral">
-            <ul>
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Sobre Nós</li>
-                <li><a href=""></a>Catálogo</li>
-                <li><a href=""></a>Produtos</li>
-                <li><a href=""></a>Admin</li>
-                <li><a href=""></a>Add Produto</li>
-                <li><a href=""></a>Add User</li>
+            <ul class="menu-ul">
+                <li><a href="intranet.html"><img class="icone" src="image/home.png" alt="">Home</a></li>
+                <li><a href="sobreNos.html"><img class="icone" src="image/about.png" alt="">Sobre <br> Nós</a></li>
+                <li><a href="catalogo.html"><img class="icone" src="image/nomear.png" alt="">Catálogo</a></li>
+                <li><a href="cadastrarProd.html"><img class="icone" src="image/list.png" alt="">Produtos</a></li>
+                <li><a href="cadastrarUser.html"><img class="icone" src="image/settings.png" alt="">Admin</a></li>
             </ul>
         </nav>
     </header>
-
-    <main class="cadastro-user">
+    <main class="main cadastro-user">
         <h2>Cadastrar Usuário</h2>
         <form action="" class="formulario">
             <div class="user-form">
@@ -70,6 +75,11 @@
         </form>
     </main>
 
+    <footer class="footer footer-bg">
+        <div class="parag">
+            <p>O Donuts do Homer - © Todos os direitos reservados</p>
+        </div>
+    </footer>
 
 </body>
 
