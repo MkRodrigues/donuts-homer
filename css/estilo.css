@@ -42,8 +42,8 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 
 .estrutura {
     display: grid;
-    grid-template-columns: 1fr 9fr;
-    /* grid-template-rows: 1fr 9fr; */
+    grid-template-columns: 130px 9fr;
+    grid-template-rows: 70px 9fr;
     grid-template-areas:  
     "barra barra"
     "header main"
@@ -52,28 +52,33 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 
 .barra {
     grid-area: barra;
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
 }
 
 .header {
     grid-area: header;
+    grid-column: 1 / 1;
+    grid-row: 2 / 4;
 }
 
 .main {
     grid-area: main;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .footer {
     grid-area: footer;
+    grid-column: ;
+    grid-row: 3 / 4;
 }
-
-
 
 /* ---------->>> BARRA SUPERIOR <<<-----------*/
 
 .logo a {
     display: flex;
-    align-content: center;
-    
+    align-content: center;   
 }
 
 .logo h1{
@@ -85,9 +90,9 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 }
 
 .barra-superBg {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    height: 70px;
+    /* height: 70px; */
     background: rgb(245, 242, 242);
     z-index: 1;
     display: flex;
@@ -122,9 +127,9 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 .header-bg {
     display: flex;
     background: #3AA;
-    position: fixed;
+    /* position: fixed; */
     width: 130px;
-    height: 100%;
+    /* height: 100%; */
     justify-content: center;
 }
 
@@ -148,7 +153,7 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    padding: 11px 0;
+    padding: 20px 0;
     color: white; 
     text-align: center;
 }
@@ -166,9 +171,16 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     background: rgb(241, 150, 184);
 }
 
+/* ---------->>> MAIN <<<-----------*/
+
+
+
+
 /* ---------->>> FOOTER <<<-----------*/
 
 .footer-bg {
     background: #cff;
+    /* background: black; */
+    height: 50px;
 }
 
