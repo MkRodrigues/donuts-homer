@@ -16,48 +16,20 @@ body{
     margin: 20px 0;
 }
 
-/* ---------->>> HISTÓRIA <<<-----------*/
-
-.historia {
+.nossoTime {
     display: flex;
-    align-items: center;
     justify-content: center;
-    align-self: center;
-
 }
 
-.hist-titulo {
-    display: flex;
-    align-items: center;
-    margin: 0 30px;
+.nossoTime h2 {
+    display: inline-flex;
 }
 
-.t1, .t2{
-    text-align: center;
-    padding: 0 15px;
-    width: 14px;
-    word-wrap: break-word;
-    white-space: pre-wrap;
+.parte-1, .parte-2 {
+    padding: 0 20px;
 }
 
-.t1 {
-    font-size: 30px;
-    font-weight: 300;
-
-}
-
-.t2 {
-    font-size: 23px;
-    margin: 0 auto;
-}
-
-.hist-p {
-    text-align: center;
-    font-weight: 300;
-    font-size: 20px;
-    width: 550px;
-    padding: 15px;
-}
+/* ---------->>> HISTÓRIA <<<-----------*/
 
 /* ---------->>> FOOTER <<<-----------*/
 
@@ -70,3 +42,18 @@ body{
     /* position: relative; */
 }
 
+.provisorio{
+    width: 400px;
+    height: 250px; 
+}
+
+.provisorio1{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px; 
+}
+
+.redes-sociais img {
+    width: 28px;
+    height: 28px;
+}
