@@ -1,9 +1,4 @@
-@import url(estilo.css);
-
-
-body{
-    font-family: 'Ubuntu', sans-serif;
-}
+@import url("estilo.css");
 
 /* ---------->>> MAIN <<<-----------*/
 
@@ -13,47 +8,82 @@ body{
 }
 .sobre-logo {
     width: 195px;
-    margin: 20px 0;
+    margin: 100px 0px 50px 0;
 }
 
-.nossoTime {
+/* ---------->>> HISTÓRIA / MISSÃO / VISÃO / VALORES <<<-----------*/
+
+.historia, .missao, .visao, .valores {
+    margin: 0 auto 20px auto;
+    width: 80%;
+}
+
+.historia h2, .missao-p h2, .visao-p h2, .valores-p h2 {
+    font-family: 'Rock Salt', cursive;
+    color: #cf966b;
+    border-bottom: 2px solid #cf966b;
+    width: 25%;
+}
+
+.hist-p, .missao-p p, .visao-p p, .valores-p p {
+    font-weight: 300;
+    text-align: left;
+    padding: 15px 0;
+    color: rgb(37, 37, 37);
+    line-height: 1.6;
+}
+
+/* ---------->>> NOSSO TIME <<<-----------*/
+
+.nt-titulo {
+    font-family: 'Rock Salt', cursive;
+    color: #cf966b;
+    text-align: center;
+}
+
+.nt-container {
     display: flex;
     justify-content: center;
 }
 
-.nossoTime h2 {
-    display: inline-flex;
-}
-
-.parte-1, .parte-2 {
-    padding: 0 20px;
-}
-
-/* ---------->>> HISTÓRIA <<<-----------*/
-
-/* ---------->>> FOOTER <<<-----------*/
-
-
-
-.footer {
-    /* position: relative; */
-    /* background: black; */
-    /* color: white; */
-    /* position: relative; */
-}
-
-.provisorio{
-    width: 400px;
-    height: 250px; 
-}
-
-.provisorio1{
+.profile {
+    width: 180px;
+    height: 180px;
+    padding: 30px;
     border-radius: 50%;
-    width: 150px;
-    height: 150px; 
 }
 
-.redes-sociais img {
-    width: 28px;
-    height: 28px;
+.pf-titulo {
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+
+/* ---------->>> REDES SOCIAIS <<<-----------*/
+
+
+.redes-sociais {
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.redes-sociais h2 {
+    font-family: 'Rock Salt', cursive;
+    color: #cf966b;
+    text-align: center;
+    padding: 50px 0 ;
+}
+
+.sociais-img {
+    display: flex;
+    justify-content: center;
+}
+
+.rs-img {
+    margin-bottom: 30px;
+    padding: 0 30px;
+    width: 40px;
+    height: 40px;
 }
