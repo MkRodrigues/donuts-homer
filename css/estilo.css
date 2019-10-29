@@ -5,7 +5,7 @@ body, h1, h2, p {
     padding: 0px;
     list-style: none;
     text-decoration: none;
-    font-family: ;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -81,7 +81,6 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 .barra-superBg {
     position: fixed;
     width: 100%;
-    /* height: 70px; */
     background: rgb(245, 242, 242);
     z-index: 1;
     display: flex;
@@ -92,7 +91,6 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 .logo h1 {
     font-family: 'Rock Salt', cursive;
     padding: 0 15px;
-
 }
 
 .barra-info {
@@ -118,7 +116,6 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     background: #3AA;
     position: fixed;
     width: 130px;
-    /* height: 100%; */
     justify-content: center;
 }
 
@@ -160,15 +157,16 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     background: rgb(241, 150, 184);
 }
 
-/* ---------->>> MAIN <<<-----------*/
-
-
-
-
 /* ---------->>> FOOTER <<<-----------*/
 
 .footer-bg {
-    background: #cff;
-    height: 50px;
+    background: rgb(212, 209, 209);
+}
+
+.parag {
+    font-weight: 300;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85em;
 }
 
