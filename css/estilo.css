@@ -17,6 +17,11 @@ li, a {
     text-decoration: none;
 }
 
+html {
+    background-image: linear-gradient(-50deg, rgb(218, 215, 215) , rgb(245, 242, 242));
+    /* rgb(230, 58, 121) */
+}
+
 /* ---------->>> CORES/FONTES PADRÕES <<<-----------*/
 
 /* 
@@ -160,7 +165,7 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 /* ---------->>> FOOTER <<<-----------*/
 
 .footer-bg {
-    background: rgb(212, 209, 209);
+    background: rgba(212, 209, 209, 0.493);
 }
 
 .parag {
