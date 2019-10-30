@@ -21,6 +21,7 @@
 .historia h2, .missao-p h2, .visao-p h2, .valores-p h2 {
     font-family: 'Rock Salt', cursive;
     color: #cf966b;
+    /* color: #b76;     */
     border-bottom: 2px solid #cf966b;
     width: 25%;
 }
