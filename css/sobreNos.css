@@ -11,80 +11,219 @@
     margin: 100px 0px 50px 0;
 }
 
-/* ---------->>> HISTÓRIA / MISSÃO / VISÃO / VALORES <<<-----------*/
+/* ---------->>> INTRO / HISTÓRIA <<<-----------*/
 
-.historia, .missao, .visao, .valores {
-    margin: 0 auto 20px auto;
-    width: 80%;
+.cima-container {
+    display: flex;
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    /* justify-content: space-between; */
+    /* align-content: center; */
 }
 
-.historia h2, .missao-p h2, .visao-p h2, .valores-p h2 {
-    font-family: 'Rock Salt', cursive;
-    color: #cf966b;
-    /* color: #b76;     */
-    border-bottom: 2px solid #cf966b;
-    width: 25%;
+.intro-container {
+/* background: black; */
+    padding: 50px 90px;
+    /* width: 40%; */
 }
 
-.hist-p, .missao-p p, .visao-p p, .valores-p p {
+.intro-container h2 {
+    color: rgb(37, 35, 35);
+    font-size: 2.5em;
+    text-align: right;
+    padding-bottom: 15px;
+}
+
+.intro-container p {
+    font-size: 1em;
     font-weight: 300;
+    text-align: right;
+    line-height: 1.3;
+}
+
+.historia-container {
+    background: #e69;
+    padding: 50px 90px;
+
+    /* width: 40%; */
+}
+
+.historia-container h2 {
+    font-size: 1.7em;
     text-align: left;
-    padding: 15px 0;
-    color: rgb(37, 37, 37);
-    line-height: 1.6;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.historia-container p {
+    font-weight: 300;
+    color: white;
+    line-height: 1.3;
+}
+
+
+/* ---------->>> MISSÃO / VISÃO / VALORES <<<-----------*/
+
+.baixo-container {
+    display: flex;
+    /* background: rgb(0, 0, 0); */
+    background: rgb(245, 242, 242);
+    height: 500px;
+    align-items: center;
+}
+
+.missao-container {
+    padding: 30px;
+}
+
+.visao-container {
+    padding: 30px;
+}
+
+.valores-container {
+    padding: 30px;
+}
+
+.visao-container {
+    background: url("../image/visao.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.visao-sobrepor {
+    content: "";
+    position: absolute;
+    top: 430px;
+    left: 371px;
+    width: 462px;
+    height: 363px;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: -1;
+} 
+
+.missao-img, .visao-img, .valores-img {
+    width: 35px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.missao-container h2, .visao-container h2, .valores-container h2 {
+    padding: 10px 0;
+    font-size: 1.7em;
+    text-align: center;
+
+}
+
+.missao-container p, .visao-container p, .valores-container p {
+    text-align: center;
+    font-size: 1.5;
+    font-weight: 300;
+    line-height: 1.5; 
+}
+
+.visao-container p, .visao-container h2 {
+    color: #ffffff;
+    z-index: 1;
 }
 
 /* ---------->>> NOSSO TIME <<<-----------*/
 
-.nt-titulo {
-    font-family: 'Rock Salt', cursive;
-    color: #cf966b;
-    text-align: center;
-}
-
-.nt-container {
+.nossoTime-container {
     display: flex;
+    width: 90%;
+    height: 700px;
+    flex-direction: column;
+    /* align-self: center; */
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.profile {
-    width: 180px;
-    height: 180px;
-    padding: 30px;
-    border-radius: 50%;
+.info-img {
+    display: block;
+    width: 160px;
+    height: 130px;
+}
+
+.func-container {
+    width: 50%;
+    margin: 30px 0 ;
+}
+
+.infoImg-container {
+    display: flex;
+    background: rgb(245, 242, 242);
+    justify-content: space-between;
 }
 
 .pf-titulo {
-    margin: 0;
-    text-align: center;
-    font-weight: 300;
-    padding-bottom: 20px;
+    background: #e69;
+    display: block;
+    font-size: 1.2em;
+    padding: 10px;
+    color: #ffffff; 
 }
 
+.pf-titulo span {
+    font-weight: 300;
+}
+
+.infoImg-container p {
+    font-weight: 300;
+    font-size: 1.1em;
+    text-align: center;
+    margin: auto 0;
+    padding: 0 45px ;
+}
+
+.nt-titulo {
+    font-size: 3em;
+    padding-bottom: 50px ;
+}
 
 /* ---------->>> REDES SOCIAIS <<<-----------*/
 
+.redesSociais-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: center; */
+}
 
 .redes-sociais {
-    justify-content: space-around;
-    margin: 30px;
+    display: flex;
+    width: 90%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(245, 242, 242);
 }
 
 .redes-sociais h2 {
-    font-family: 'Rock Salt', cursive;
-    color: #cf966b;
-    text-align: center;
-    padding: 50px 0 ;
-}
-
-.sociais-img {
-    display: flex;
-    justify-content: center;
+    font-size: 1.3em;
+    font-weight: 300;
+    padding: 0 50px; 
 }
 
 .rs-img {
-    margin-bottom: 30px;
-    padding: 0 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    padding: 0 15px;
+}
+
+.social-logo {
+    background: #e69;
+    width: 10%;
+}
+
+.social-logo img{
+    width: 70px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.siga-nos span {
+    font-weight: 400;
 }
