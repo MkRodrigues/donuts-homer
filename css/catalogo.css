@@ -1,11 +1,55 @@
 @import url("estilo.css");
 
 /* ---------->>> MAIN <<<-----------*/
-
-.main {
-    margin: 130px;
+  
+.intro-catalogo {
+    background: #e69;
+    width: 100%;
+    height: 500px;
 }
 
+.img::after, .img::before {
+    content: ' ';
+    display: table;
+    clear: both;
+} 
+
+.img {
+    width: 50%;
+    position: absolute;
+    left: 150px;
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main {
+    margin: 130px;
+} */
+/* 
 .produtos-catalogo {
     display: flex ;
     justify-content: center;
@@ -21,8 +65,8 @@
     display: flex;
     width: 150px;
     height: 300px;
-    /* background: rgb(245, 242, 242); */
-    /* background: #e69; */
+    background: rgb(245, 242, 242);
+    background: #e69;
     flex-direction: column;
     padding: 0 30px; 
     justify-content: center;
@@ -39,6 +83,6 @@
     height: 150px;
     border-radius: 10px;
     margin: 0 auto;
-    /* border: 10px solid #cf966b;÷ */
-    /* box-shadow: 0 0 0 10px #e69; */
-}
+    border: 10px solid #cf966b;÷
+    box-shadow: 0 0 0 10px #e69;
+} */
