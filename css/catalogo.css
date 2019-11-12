@@ -1,8 +1,24 @@
 @import url("estilo.css");
 
 /* ---------->>> MAIN <<<-----------*/
+
+.main {
+    width: 100%;
+}
+
+.intro-img {
+    width: 50%;
+    /* position: absolute; */
+    /* left: ; */
+}
+/* .bg-intro {
+    width: 90%;
+    height: 500px;
+    background: black;
+    background: url("../image/catalogo.jpg");
+} 
   
-.intro-catalogo {
+/* .intro-catalogo {
     background: #e69;
     width: 100%;
     height: 500px;
@@ -13,13 +29,13 @@
     display: table;
     clear: both;
 } 
-
-.img {
+*/
+/* .img {
     width: 50%;
     position: absolute;
-    left: 150px;
+    left: 400px;
 
-}
+} */ 
     
 
 
