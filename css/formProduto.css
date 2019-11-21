@@ -1,0 +1,62 @@
+@import url(estilo.css);
+
+/* ---------->>> MAIN <<<-----------*/
+
+.main {
+    width: 91%;
+}
+
+.cadastro-prod {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background:#fff;
+    border-left: 2px solid white;
+
+}
+
+.cad-background {
+    width: 100%;
+    height: 200px;
+    background: #3aa;
+}
+
+.cad-background h2 {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 3em;
+}
+
+.formulario {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top: 100px;
+    background: #fff;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.5)
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px;
+}
+
+.prod-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.campos {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.campo-misto {
+    display: flex;
+}
+
