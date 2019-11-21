@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>O Donuts do Homer - Produtos</title>
+    <title>O Donuts do Homer - Cadastrar Usuário</title>
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Ubuntu:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/produtos.css" />
+    <link rel="stylesheet" type="text/css" href="css/listarProdutos.css" />
 </head>
 
 <body class="estrutura">
@@ -38,15 +38,43 @@
             </ul>
         </nav>
     </header>
-    <main class="main produtos-container">
+    <main class="main">
+        <h2 class="main-h2">Produtos</h2>
+
+        <a class="btn-produtos" href="formProduto.html">Cadastrar Produtos</a>
+
+        <section class="tabela-produtos">
+
+            <table class="tabela">
+
+                <thead>
+                    <tr>
+                        <th class="checkbox"><input type="checkbox"></th>
+                        <th class="rotulo">Id</th>
+                        <th class="rotulo">Produto</th>
+                        <th class="rotulo">Código</th>
+                        <th class="rotulo">R$</th>
+                        <th class="rotulo">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="row">
+                        <td><input type="checkbox"></td>
+                        <td>Id</td>
+                        <td>Nome do Produto</td>
+                        <td>01234</td>
+                        <td>0,00</td>
+                        <td>apagar, editar</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+        </section>
 
     </main>
-
-    <footer class="footer footer-bg">
-        <div class="parag">
-            <p>O Donuts do Homer - © Todos os direitos reservados</p>
-        </div>
-    </footer>
 
 </body>
 

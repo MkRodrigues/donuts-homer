@@ -1,0 +1,49 @@
+@import url(estilo.css);
+
+/* ---------->>> MAIN <<<-----------*/
+
+.main {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.main-h2 {
+    font-size: 3.5em;
+    color: #e69;
+    margin: 70px 0px 150px 30px;
+}
+
+.btn-produtos {
+    font-size: 1.1em;
+    width: 200px;
+    height: 50px;
+    background: #08c008;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto 0;
+}
+
+.tabela-produtos {
+    margin-top: 20px;
+}
+
+.tabela {
+    width: 100%;
+}
+
+th{
+    /* border-bottom: 2px solid black; */
+    padding: 20px 0;
+
+}
+
+td {
+    text-align: center;
+}
+
+.rotulo {
+    font-size: 1.1em;
+    color: #e69;
+}
