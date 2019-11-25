@@ -25,6 +25,16 @@
     margin: auto 0;
 }
 
+.btn-excluirProd {
+    background: red;
+    color: white;
+    height: 50px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .tabela-produtos {
     margin-top: 20px;
 }

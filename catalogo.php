@@ -60,9 +60,12 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                 <?php
 
-                if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3307)) { } else {
+                if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) { 
+                    // Nada dentro
+                } else {
                     die("Problema ao conectar ao SGDB");
                 }
+
                 $p = mysqli_prepare($db, '	SELECT * FROM produto');
                 mysqli_stmt_execute($p);
                 $result = mysqli_stmt_get_result($p);
@@ -72,7 +75,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                     <div class="produto">
                         <img class="donut-img" src="image/donut1.jpg" alt="Imagem do Produto">
-                        <h3>Produto 1</h3>
+                        <h3><?=$produto["produto"]?></h3>
                     </div>
 
                 <?php
@@ -88,13 +91,13 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
         </section>
 
-        <section class="frase-efeito">
+        <!-- <section class="frase-efeito">
 
             <div>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="f-backgroung"></div>
-        </section>
+        </section> -->
 
     </main>
 

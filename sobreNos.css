@@ -1,0 +1,14 @@
+@import url(estilo.css);
+
+.barra {
+    background: #ffc;
+}
+
+.header {
+    background: #3aa;
+}
+.main {
+    background: white;
+}
+
+/* ---------->>> RESET <<<-----------*/

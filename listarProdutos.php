@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['idUsuario']) header("Location: index.html");
+if (!$_SESSION['idUsuario']) header("Location: index.html");
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,10 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
     <main class="main">
         <h2 class="main-h2">Produtos</h2>
 
-        <a class="btn-produtos" href="formProduto.html">Cadastrar Produtos</a>
+        <div class="botoes">
+            <a class="btn-produtos" href="formProduto.php">Cadastrar Produtos</a>
+            <a class="btn-excluirProd" href="">Excluir</a>
+        </div>
 
         <section class="tabela-produtos">
 
@@ -62,16 +65,40 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
                         <th class="rotulo">Ações</th>
                     </tr>
                 </thead>
-
                 <tbody>
-                    <tr class="row">
-                        <td><input type="checkbox"></td>
-                        <td>Id</td>
-                        <td>Nome do Produto</td>
-                        <td>01234</td>
-                        <td>0,00</td>
-                        <td>apagar, editar</td>
-                    </tr>
+
+                    <?php
+
+                    if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) {
+                        // Nada dentro
+                    } else {
+                        die("Problema ao conectar ao SGDB");
+                    }
+
+                    $p = mysqli_prepare($db, '	SELECT * FROM produto');
+                    mysqli_stmt_execute($p);
+                    $result = mysqli_stmt_get_result($p);
+
+                    while ($produto = mysqli_fetch_assoc($result)) {
+                        ?>
+
+                        <tr class="row">
+                            <td><input name="checkProd" type="checkbox"></td>
+                            <td><?= $produto['id_produto'] ?></td>
+                            <td><?= $produto['produto'] ?></td>
+                            <td><?= $produto['codigo'] ?></td>
+                            <td><?= $produto['preco'] ?></td>
+                            <td><a href="excluirProduto.php?id_produto=<?=$produto['id_produto']?>">Excluir</a></td>
+                            <td><a href="editarProduto.php?id_produto=<?=$produto['id_produto']?>">Editar</a></td>
+
+                        </tr>
+
+                    <?php
+                    }
+                    ?>
+
+
+
 
 
                 </tbody>
