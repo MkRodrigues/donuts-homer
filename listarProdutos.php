@@ -88,15 +88,16 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                             <td><?= $produto['produto'] ?></td>
                             <td><?= $produto['codigo'] ?></td>
                             <td><?= $produto['preco'] ?></td>
-                            <td><a href="excluirProduto.php?id_produto=<?=$produto['id_produto']?>">Excluir</a></td>
-                            <td><a href="editarProduto.php?id_produto=<?=$produto['id_produto']?>">Editar</a></td>
+                            <td>
+                                <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="editar-prod" src="image/edit.png" alt=""></a>
+                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="deletar-prod" src="image/delete.png" alt=""></a>
+                            </td>
 
                         </tr>
 
                     <?php
                     }
                     ?>
-
 
 
 

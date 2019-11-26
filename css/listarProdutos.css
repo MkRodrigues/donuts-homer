@@ -25,22 +25,13 @@
     margin: auto 0;
 }
 
-.btn-excluirProd {
-    background: red;
-    color: white;
-    height: 50px;
-    width: 100px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-}
-
 .tabela-produtos {
     margin-top: 20px;
 }
 
 .tabela {
     width: 100%;
+    border: 1px solid black;
 }
 
 th{
@@ -56,4 +47,9 @@ td {
 .rotulo {
     font-size: 1.1em;
     color: #e69;
+}
+
+.editar-prod, .delete-prod {
+    width: 10%;
+    padding: 0 10px;
 }
