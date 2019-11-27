@@ -26,8 +26,8 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2>Nome do Usuário</h2>
-            <a href=""><img class="icone-barra" src="image/exit.png" alt=""></a> <!-- colocar uma imagem como link -->
+            <h2><?= $_SESSION['nome'] ?></h2>
+            <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
         </div>
 
     </div>
@@ -48,7 +48,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
         <div class="botoes">
             <a class="btn-produtos" href="formProduto.php">Cadastrar Produtos</a>
-            <a class="btn-excluirProd" href="">Excluir</a>
         </div>
 
         <section class="tabela-produtos">
@@ -57,11 +56,12 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                 <thead>
                     <tr>
-                        <th class="checkbox"><input type="checkbox"></th>
+                        <!-- <th class="checkbox"><input type="checkbox"></th> -->
                         <th class="rotulo">Id</th>
                         <th class="rotulo">Produto</th>
                         <th class="rotulo">Código</th>
                         <th class="rotulo">R$</th>
+                        <th class="rotulo">Descrição</th>
                         <th class="rotulo">Ações</th>
                     </tr>
                 </thead>
@@ -83,14 +83,15 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         ?>
 
                         <tr class="row">
-                            <td><input name="checkProd" type="checkbox"></td>
+                            <!-- <td><input name="checkProd" type="checkbox"></td> -->
                             <td><?= $produto['id_produto'] ?></td>
                             <td><?= $produto['produto'] ?></td>
                             <td><?= $produto['codigo'] ?></td>
                             <td><?= $produto['preco'] ?></td>
+                            <td><?= $produto['descricao'] ?></td>
                             <td>
-                                <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="editar-prod" src="image/edit.png" alt=""></a>
-                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="deletar-prod" src="image/delete.png" alt=""></a>
+                                <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/edit.png" alt=""></a>
+                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/delete.png" alt=""></a>
                             </td>
 
                         </tr>

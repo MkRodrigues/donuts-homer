@@ -1,5 +1,4 @@
-@import url(estilo.css);
-
+@import url("estilo.css");
 
 main{
 display: flex;
@@ -31,143 +30,141 @@ align-items: center;
 
 
 /* ---------------------Noticias/calendario----------- */
+
 .intranet-news{
     width: 100%;
-    
 }
-
 
 .noticia-1{
-display: flex;
-margin-top: 100px;
-justify-content: center;
-    
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
 }
+
 .noticia-2{
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-        
-    }
-    .noticia-3{
-        display: flex;
-        margin-top: 10px;
-        justify-content: center;
-            
-        }
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.noticia-3{
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
 
 #calendar{
     margin-right: 1%;
 }
 
-
 /* ----------------------Atualizações---------------- */
 
 .intranet-atualizacoes{
-    width: 100%;
+  width: 100%;
     
-
 }
 .atualizacao-1{
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
 }
+
 .atualizacao-2{
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 #img-atualiza{
-    margin-top: -50px;
-    height: 70px;
-    width: 80px;
+  margin-top: -50px;
+  height: 70px;
+  width: 80px;
 }
 
 #varinha{
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 /*----------------------- Eventos --------------------*/
 .intranet-eventos{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    width: 100%;
-    margin: 50px 0;  
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0;  
 }
+
 .evento- img{
   width: 600px;
   height: 400px;
   align-self: center;
-  
 }
 
 /* -----Primeira foto------ */
+
 .evento-1 {
     margin-top: 10%;
     position: relative;
   }
-   .eventotxt-1 {
-    display: none;
-  }
-  
-  .evento-1:hover .eventotxt-1 {
-    display: block;
-  }
-  
-  .eventotxt-1 {
-    color: white;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    width:600px;
-    height: 400px;
-    position: absolute;
-    top: 0;
-  }
 
-  .eventotxt-1 p{
-      margin-top: 30%;
-  }
+.eventotxt-1 {
+  display: none;
+}
+  
+.evento-1:hover .eventotxt-1 {
+  display: block;
+}
+
+.eventotxt-1 {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  width:600px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+}
+
+.eventotxt-1 p{
+  margin-top: 30%;
+}
 
 /* -----Segunda foto------ */
 
 .evento-2 {
-    position: relative;
-  }
-  
-  .eventotxt-2 {
-    display: none;
-  }
-  
-  .evento-2:hover .eventotxt-2 {
-    display: block;
-  }
-  
-  .eventotxt-2 {
-    color: white;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    width:600px;
-    height: 400px;
-    position: absolute;
-    top: 0;
-  }
-  .eventotxt-2 p{
-    margin-top: 30%;
+  position: relative;
+}
+
+.eventotxt-2 {
+  display: none;
+}
+
+.evento-2:hover .eventotxt-2 {
+  display: block;
+}
+
+.eventotxt-2 {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  width:600px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+}
+
+.eventotxt-2 p{
+  margin-top: 30%;
 }
 
 /* ---------footer----- */
 
-
-
 footer{
-   display:flex;
-   justify-content: center;
-    align-items: flex-end;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
 }

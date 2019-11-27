@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['idUsuario']) header("Location: index.html");
+if (!$_SESSION['idUsuario']) header("Location: index.html");
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +26,8 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2>Nome do Usuário</h2>
-            <a href=""><img class="icone-barra" src="image/exit.png" alt=""></a> <!-- colocar uma imagem como link -->
+            <h2><?= $_SESSION['nome'] ?></h2>
+            <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
         </div>
 
     </div>
@@ -45,7 +45,7 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
     </header>
     <main class="main">
 
-        <a class="btn-usuarios" href="formUsuario.html">Cadastrar Usuários</a>
+        <a class="btn-usuarios" href="formUsuario.php">Cadastrar Usuários</a>
 
     </main>
 

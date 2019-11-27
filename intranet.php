@@ -12,7 +12,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>O Donuts do Homer - Intranet</title>
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Ubuntu:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/intranet.css" />
+    <link rel="stylesheet" type="text/css" href="css/intranet.css">
 </head>
 
 <body class="estrutura">
@@ -26,7 +26,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2><?= $_SESSION['nome'] ?></h2>
+            <h2><?= $_SESSION['nome']?></h2>
             <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
         </div>
 

@@ -1,4 +1,4 @@
-@import url(estilo.css);
+@import url("estilo.css");
 
 /* ---------->>> MAIN <<<-----------*/
 
@@ -31,25 +31,31 @@
 
 .tabela {
     width: 100%;
-    border: 1px solid black;
+     border-spacing: 0;
+
 }
 
 th{
-    /* border-bottom: 2px solid black; */
-    padding: 20px 0;
-
+    padding: 30px 0;
 }
 
 td {
+    padding: 5px;
+    color: #e69;
     text-align: center;
+    width: 400px;
+    background: #fafafa;
+    border-top: 1px solid white;
+    border-bottom: 2px solid white;
+    font-weight: 300;
 }
 
 .rotulo {
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: #e69;
 }
 
-.editar-prod, .delete-prod {
-    width: 10%;
-    padding: 0 10px;
+.icones {
+   width: 20px;
+   padding: 0 10px;
 }
