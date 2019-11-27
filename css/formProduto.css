@@ -29,8 +29,8 @@
 }
 
 .formulario {
-    width: 900px;
-    height: 500px;
+    width: 850px;
+    height: 450px;
     position: absolute;
     top: 100px;
     background: #fff;
@@ -43,6 +43,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 100px;
+    justify-content: flex-end;
 }
 
 .prod-form {
@@ -51,12 +52,64 @@
     flex-wrap: wrap;
 }
 
-.campos {
+.linha-um, .linha-dois, .linha-tres, .linha-quatro {
+    display: flex;
     width: 100%;
-    margin: 10px 0;
+    margin-bottom: 15px;
 }
 
-.campo-misto {
+.linha-dupla {
     display: flex;
 }
 
+.label {
+    padding: 12px;
+    border-radius: 5px 0 0px 5px;
+    background: #dbdbdb;
+    color: #5f5f5f;
+}
+
+.campo, .campo-dois, .campo-quatro {
+    border: 1px solid #dbdbdb;;
+    border-radius: 0 5px 5px 0;
+}
+
+.campo {
+    /* font-family: 'Ubuntu', sans-serif; */
+    color: #5f5f5f;
+    font-size: 1em;
+}
+
+.campo-dois, .campo-quatro {
+    font-family: 'Ubuntu', sans-serif;
+    color: #5f5f5f;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.linha-tres {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit, .reset {
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.submit {
+    border-radius: 5px 0 0 5px;
+    color: white;
+    background: #1c1;
+}
+
+.reset {
+    border-radius: 0 5px 5px 0;
+    color: white;
+    background: red;
+}

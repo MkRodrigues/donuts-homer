@@ -106,19 +106,20 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
 
 .barra-info {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .barra-info h2 {
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 0 10px;
-    font-weight: 500px;
-    background: black;
+    font-weight: 300;
 }
 
 .icone-barra {
     padding: 0 15px;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 /* ---------->>> MENU <<<-----------*/

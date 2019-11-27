@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['idUsuario']) header("Location: index.html");
+if (!$_SESSION['idUsuario']) header("Location: index.html");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2><?=$_SESSION['nome']?></h2>
+            <h2><?= $_SESSION['nome'] ?></h2>
             <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
         </div>
 
@@ -52,19 +52,38 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
 
         <form action="addProduto.php" method="POST" class="formulario">
             <div class="form-container">
+
                 <div class="prod-form">
-                    <div class="campos"><span class="label">Código</span><input name="codigo" type="text"></div>
-                    <div class="campos"><span class="label">Produto</span><input name="produto" type="text"></div>
-                    <div class="campo-misto">
-                        <div><span class="label">Preço Unitário</span><input name="preco" type="text"></div>
-                        <div><span class="label">Categoria</span><input name="categoria" type="text"></div>
+                    <div class="linha-um">
+                        <span class="label">Código</span>
+                        <input class="campo" name="codigo" type="text">
                     </div>
-                    <div class="campos"><span class="label">Descrição</span><textarea name="descricao" class="descricao" cols="50" rows="5"></textarea></div>
+
+                    <div class="linha-dois">
+                        <span class="label">Produto</span>
+                        <input class="campo-dois" name="produto" type="text">
+                    </div>
+
+                    <div class="linha-tres">
+                        <div class="linha-dupla">
+                            <span class="label">Preço Unitário</span>
+                            <input class="campo" name="preco" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">Categoria</span>
+                            <input class="campo" name="categoria" type="text">
+                        </div>
+                    </div>
+
+                    <div class="linha-quatro">
+                        <span class="label">Descrição</span>
+                        <input class="campo-quatro" name="descricao" class="descricao">
+                    </div>
                 </div>
 
                 <div class="prod-btn">
-                    <button type="submit">Adicionar produto</button>
-                    <button type="reset">Cancelar</button>
+                    <button class="submit" type="submit">Adicionar produto</button>
+                    <button class="reset" type="reset">Cancelar</button>
                 </div>
             </div>
         </form>
