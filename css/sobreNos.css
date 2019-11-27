@@ -95,9 +95,9 @@
 .visao-sobrepor {
     content: "";
     position: absolute;
-    top: 430px;
-    left: 371px;
-    width: 462px;
+    top: 436px;
+    left: 382px;
+    width: 474px;
     height: 363px;
     background: rgba(0, 0, 0, 0.60);
     z-index: -1;
