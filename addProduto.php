@@ -19,3 +19,5 @@ $p = mysqli_prepare( $db, '	INSERT produto (codigo, produto, preco, categoria, d
     mysqli_stmt_execute($p);
     
     header('Location: catalogo.php');
+
+    
