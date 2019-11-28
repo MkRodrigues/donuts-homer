@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['idUsuario']) header("Location: index.html");
+if (!$_SESSION['idUsuario']) header("Location: index.html");
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>O Donuts do Homer - Cadastrar Usuário</title>
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Ubuntu:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/listarUsuarios.css" />
+    <link rel="stylesheet" type="text/css" href="css/formUsuario.css" />
 </head>
 
 <body class="estrutura">
@@ -26,7 +26,7 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2><?=$_SESSION['nome']?></h2>
+            <h2><?= $_SESSION['nome'] ?></h2>
             <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a> <!-- colocar uma imagem como link -->
         </div>
 
@@ -44,38 +44,103 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
         </nav>
     </header>
     <main class="main cadastro-user">
-        <h2>Cadastrar Usuário</h2>
+
+        <div class="cad-background">
+            <h2>Cadastrar Usuário</h2>
+        </div>
+
         <form action="addUsuario.php" class="formulario" method="POST">
-            <div class="user-form">
+
+            <div class="form-container">
+
                 <div class="aba-pessoais">
-                    <h3>Dados Pessoais</h3>
-                    <div><span>Nome Completo</span><input name="nome" type="text"></div>
-                    <div><span>R.G</span><input name="rg" type="text"></div>
-                    <div><span>CPF</span><input name="cpf" type="text"></div>
-                    <div><span>Cargo</span><input name="cargo" type="text"></div>
-                    <div><span>Departamento</span><input name="departamento" type="text"></div>
+                    <h3 class="subtitulo">Dados Pessoais</h3>
+
+                    <div class="linha-um">
+                        <span class="label-nome">Nome Completo</span>
+                        <input class="campo-nome" name="nome" type="text">
+                    </div>
+
+                    <div class="linha-dois">
+                        <div class="linha-dupla">
+                            <span class="label">R.G</span>
+                            <input class="campo" name="rg" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">CPF</span>
+                            <input class="campo" name="cpf" type="text">
+                        </div>
+                    </div>
+
+                    <div class="linha-tres">
+                        <div class="linha-dupla">
+                            <span class="label">Cargo</span>
+                            <input class="campo" name="cargo" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">Departamento</span>
+                            <input class="campo" name="departamento" type="text">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="aba-endereco">
-                    <h3>Endereço</h3>
-                    <div><span>Rua</span><input name="rua" type="text"></div>
-                    <div><span>Número</span><input name="numero" type="text"></div>
-                    <div><span>CEP</span><input name="cep" type="text"></div>
-                    <div><span>Bairro</span><input name="bairro" type="text"></div>
-                    <div><span>Cidade</span><input name="cidade" type="text"></div>
-                    <div><span>Estado</span><input name="estado" type="text"></div>
+                    <h3 class="subtitulo">Endereço</h3>
+
+                    <div class="linha-quatro">
+                        <span class="label-rua">Rua</span>
+                        <input class="campo-rua" name="rua" type="text">
+                    </div>
+
+                    <div class="linha-cinco">
+                        <div class="linha-tripla">
+                            <span class="label">Número</span>
+                            <input class="campo-triplo" name="numero" type="text">
+                        </div>
+                        <div class="linha-tripla">
+                            <span class="label">CEP</span>
+                            <input class="campo-triplo" name="cep" type="text">
+                        </div>
+                        <div class="linha-tripla">
+                            <span class="label">Bairro</span>
+                            <input class="campo-triplo" name="bairro" type="text">
+                        </div>
+                    </div>
+
+                    <div class="linha-seis">
+                        <div class="linha-dupla">
+                            <span class="label">Cidade</span>
+                            <input class="campo" name="cidade" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">Estado</span>
+                            <input class="campo" name="estado" type="text">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="aba-login">
-                    <h3>Login e Senha</h3>
-                    <div><span>Login</span><input name="login" type="text"></div>
-                    <div><span>Senha</span><input name="senha" type="password"></div>
+                    <h3 class="subtitulo">Login e Senha</h3>
+
+                    <div class="linha-sete">
+                        <div class="linha-dupla">
+                            <span class="label">Login</span>
+                            <input class="campo" name="login" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">Senha</span>
+                            <input class="campo" name="senha" type="password">
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             <div class="user-btn">
-                <button type="submit">Adicionar usuário</button>
-                <button type="reset">Cancelar</button></div>
+                <button class="submit" type="submit">Adicionar usuário</button>
+                <button class="reset" type="reset">Cancelar</button>
+            </div>
+
         </form>
     </main>
 

@@ -1,1 +1,60 @@
 @import url("estilo.css");
+
+/* ---------->>> MAIN <<<-----------*/
+
+.main {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.main-h2 {
+    font-size: 3.5em;
+    color: #e69;
+    margin: 70px 0px 150px 30px;
+}
+
+.btn-usuarios {
+    font-size: 1.1em;
+    width: 200px;
+    height: 50px;
+    background: #08c008;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto 0;
+}
+
+.tabela-usuarios {
+    margin-top: 20px;
+}
+
+.tabela {
+    width: 100%;
+     border-spacing: 0;
+}
+
+th{
+    padding: 30px 0;
+}
+
+td {
+    padding: 5px;
+    color: #e69;
+    text-align: center;
+    width: 400px;
+    background: #fafafa;
+    border-top: 1px solid white;
+    border-bottom: 2px solid white;
+    font-weight: 300;
+}
+
+.rotulo {
+    font-size: 1.1em;
+    color: #e69;
+}
+
+.icones {
+   width: 20px;
+   padding: 0 10px;
+}

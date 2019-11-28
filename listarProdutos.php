@@ -100,9 +100,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                     }
                     ?>
 
-
-
-
                 </tbody>
 
             </table>

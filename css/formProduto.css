@@ -12,7 +12,6 @@
     justify-content: center;
     background:#fff;
     border-left: 2px solid white;
-
 }
 
 .cad-background {
@@ -70,7 +69,7 @@
 }
 
 .campo, .campo-dois, .campo-quatro {
-    border: 1px solid #dbdbdb;;
+    border: 1px solid #dbdbdb;
     border-radius: 0 5px 5px 0;
 }
 
