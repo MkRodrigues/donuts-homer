@@ -6,7 +6,7 @@ if(!$_SESSION['idUsuario']) header("Location: index.html");
 
 $id_produto = $_GET['id_produto'];
 
-if( $db = new mysqli('localhost','root','','donutsh',3306) ){
+if( $db = new mysqli('localhost','root','','donutsh',3307) ){
 } else {
 	die("Problema ao conectar ao SGDB");
 }

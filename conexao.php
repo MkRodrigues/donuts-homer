@@ -4,7 +4,7 @@ if( $db = mysqli_connect(	'localhost',
 							'root',
 							'',
 							'donutsh',
-							3306) ){
+							3307) ){
 
 } else {
 

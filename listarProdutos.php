@@ -69,7 +69,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                     <?php
 
-                    if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) {
+                    if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3307)) {
                         // Nada dentro
                     } else {
                         die("Problema ao conectar ao SGDB");

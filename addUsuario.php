@@ -17,7 +17,7 @@ $estado = $_POST['estado'];
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
-if( $db = mysqli_connect('localhost','root','','donutsh',3306) ){
+if( $db = mysqli_connect('localhost','root','','donutsh',3307) ){
 } else {
 	die("Problema ao conectar ao SGDB");
 }

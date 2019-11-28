@@ -1,7 +1,7 @@
 <?php
 //Conecta no banco
 session_start();
-if( $db = mysqli_connect('localhost','root','','donutsh',3306) ){
+if( $db = mysqli_connect('localhost','root','','donutsh',3307) ){
 } else {
 	die("Problema ao conectar ao SGDB");
 }

@@ -12,7 +12,7 @@ $descricao = $_POST['descricao'];
 echo $codigo;
 
 
-if( $db = mysqli_connect('localhost','root','','donutsh',3306) ){
+if( $db = mysqli_connect('localhost','root','','donutsh',3307) ){
 } else {
 	die("Problema ao conectar ao SGDB");
 }
@@ -25,7 +25,7 @@ $p = mysqli_prepare( $db, '	UPDATE produto (codigo, produto, preco, categoria, d
 
     ?>
 
-<form action="" class="formulario" method="POST">
+<form action="editarProduto.php" class="formulario" method="POST">
             <div class="prod-form">
                 <div><span>Código</span><input type="text"></div>
                 <div><span>Produto</span><input type="text"></div>
