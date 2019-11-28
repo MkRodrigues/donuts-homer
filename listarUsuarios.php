@@ -93,7 +93,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         ?>
 
                         <tr class="row">
-                            <!-- <td><input name="checkProd" type="checkbox"></td> -->
                             <td><?= $usuario['id_usuario'] ?></td>
                             <td><?= $usuario['login'] ?></td>
                             <td><?= $usuario['nome'] ?></td>
