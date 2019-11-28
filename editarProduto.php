@@ -1,41 +1,95 @@
 <?php
 session_start();
-if(!$_SESSION['idUsuario']) header("Location: index.html");
+if (!$_SESSION['idUsuario']) header("Location: index.html");
+?>
 
 
-$codigo = $_POST['codigo'];
-$produto = $_POST['produto'];
-$preco = $_POST['preco'];
-$categoria = $_POST['categoria'];
-$descricao = $_POST['descricao'];
+<!DOCTYPE html>
+<html lang="pt-br">
 
-echo $codigo;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>O Donuts do Homer - Cadastrar Produtos</title>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Ubuntu:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/formProduto.css" />
+</head>
 
+<body class="estrutura">
 
-if( $db = mysqli_connect('localhost','root','','donutsh',3307) ){
-} else {
-	die("Problema ao conectar ao SGDB");
-}
+    <div class="barra barra-superBg">
 
-$p = mysqli_prepare( $db, '	UPDATE produto (codigo, produto, preco, categoria, descricao) values (?, ?, ?, ?, ?)');
-    mysqli_stmt_bind_param($p, 'sssss' ,$codigo, $produto, $preco, $categoria, $descricao);
-    mysqli_stmt_execute($p);
-    
-    // header('Location: catalogo.php');
+        <div class="logo">
+            <a href="#">
+                <h1>O Donuts do Homer</h1>
+            </a>
+        </div>
 
-    ?>
+        <div class="barra-info">
+            <h2><?= $_SESSION['nome'] ?></h2>
+            <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
+        </div>
 
-<form action="editarProduto.php" class="formulario" method="POST">
-            <div class="prod-form">
-                <div><span>Código</span><input type="text"></div>
-                <div><span>Produto</span><input type="text"></div>
-                <div><span>Preço Unitário</span><input type="text"></div>
-                <div><span>Categoria</span><input type="text"></div>
-                <div><span>Descrição</span><input type="text"></div>
-            </div>
+    </div>
 
-            <div class="prod-btn">
-                <button>Salvar</button>
-                <button>Cancelar</button>
+    <header class="header header-bg">
+        <nav class="menu-lateral">
+            <ul class="menu-ul">
+                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Home</a></li>
+                <li><a href="sobreNos.php"><img class="icone" src="image/about.png" alt="">Sobre <br> Nós</a></li>
+                <li><a href="catalogo.php"><img class="icone" src="image/nomear.png" alt="">Catálogo</a></li>
+                <li><a href="listarProdutos.php"><img class="icone" src="image/list.png" alt="">Produtos</a></li>
+                <li><a href="listarUsuarios.php"><img class="icone" src="image/settings.png" alt="">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class=" main cadastro-prod">
+
+        <div class="cad-background">
+            <h2>Atualizar Produto</h2>
+        </div>
+
+        <form action="atualizarProduto.php" method="POST" class="formulario">
+            <div class="form-container">
+
+                <div class="prod-form">
+                    <div class="linha-um">
+                        <span class="label">Código</span>
+                        <input class="campo" name="codigo" type="text">
+                    </div>
+
+                    <div class="linha-dois">
+                        <span class="label">Produto</span>
+                        <input class="campo-dois" name="produto" type="text">
+                    </div>
+
+                    <div class="linha-tres">
+                        <div class="linha-dupla">
+                            <span class="label">Preço Unitário</span>
+                            <input class="campo" name="preco" type="text">
+                        </div>
+                        <div class="linha-dupla">
+                            <span class="label">Categoria</span>
+                            <input class="campo" name="categoria" type="text">
+                        </div>
+                    </div>
+
+                    <div class="linha-quatro">
+                        <span class="label">Descrição</span>
+                        <input class="campo-quatro" name="descricao" class="descricao">
+                    </div>
+                </div>
+
+                <div class="prod-btn">
+                    <button class="submit" type="submit">Atualizar produto</button>
+                    <button class="reset" type="reset">Cancelar</button>
+                </div>
             </div>
         </form>
+
+    </main>
+</body>
+
+</html>
