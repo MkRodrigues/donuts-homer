@@ -56,11 +56,9 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
             <div class="produtos-container">
 
-
-
                 <?php
 
-                if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3307)) { 
+                if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) { 
                     // Nada dentro
                 } else {
                     die("Problema ao conectar ao SGDB");
@@ -75,7 +73,10 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                     <div class="produto">
                         <img class="donut-img" src="image/donut1.jpg" alt="Imagem do Produto">
-                        <h3><?=$produto["produto"]?></h3>
+                        
+                        <a href="produtoView.php?id_produto=<?=$produto['id_produto']?>"><h3><?=$produto["produto"]?></h3></a>
+<!-- Esse cod vai dentro do link -->
+                        <!-- editarUsuario.php?id_usuario=<?//=$id_usuario?> -->
                     </div>
 
                 <?php

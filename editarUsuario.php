@@ -2,36 +2,55 @@
 session_start();
 if (!$_SESSION['idUsuario']) header("Location: index.html");
 
-$nome = $_POST['nome'];
-$rg = $_POST['rg'];
-$cpf = $_POST['cpf'];
-$cargo = $_POST['cargo'];
-$departamento = $_POST['departamento'];
-$rua = $_POST['rua'];
-$numero = $_POST['numero'];
-$cep = $_POST['cep'];
-$bairro = $_POST['bairro'];
-$cidade = $_POST['cidade'];
-$estado = $_POST['estado'];
-$login = $_POST['login'];
-$senha = $_POST['senha'];
+$id_usuario = $_GET['id_usuario'];
 
-if( $db = mysqli_connect('localhost','root','','donutsh',3306) ){
-} else {
-	die("Problema ao conectar ao SGDB");
+if (isset($_POST["submit"])) {
+    $nome = $_POST['nome'];
+    $rg = $_POST['rg'];
+    $cpf = $_POST['cpf'];
+    $cargo = $_POST['cargo'];
+    $departamento = $_POST['departamento'];
+    $rua = $_POST['rua'];
+    $numero = $_POST['numero'];
+    $cep = $_POST['cep'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+    // return;
 }
 
-$p = mysqli_prepare($db, '	SELECT * FROM usuario');
-                    mysqli_stmt_execute($p);
-                    
+if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) { } else {
+    die("Problema ao conectar ao SGDB");
+}
 
-$p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo = ?, departamento = ?, rua = ?, numero = ?, cep = ?, bairro = ?, cidade = ?, estado = ?, login = ?, senha = ?) WHERE id_usuario = ?');
+if (!empty($login)) {
 
-    mysqli_stmt_bind_param($p, 'ssssssissssss' ,$nome, $rg, $cpf, $cargo, $departamento, $rua, $numero, $cep, $bairro, $cidade, $estado, $login, $senha, $_POST['id_usuario']);
+    if(!empty($senha)){
+    $p = mysqli_prepare($db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo = ?, departamento = ?, rua = ?, numero = ?, cep = ?, bairro = ?, cidade = ?, estado = ?, login = ?, senha = ? WHERE id_usuario = ?');
+
+    mysqli_stmt_bind_param($p, 'ssssssisssssss', $nome, $rg, $cpf, $cargo, $departamento, $rua, $numero, $cep, $bairro, $cidade, $estado, $login, $senha, $id_usuario);
     mysqli_stmt_execute($p);
+    }else{
+        $p = mysqli_prepare($db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo = ?, departamento = ?, rua = ?, numero = ?, cep = ?, bairro = ?, cidade = ?, estado = ?, login = ? WHERE id_usuario = ?');
+
+    mysqli_stmt_bind_param($p, 'ssssssissssss', $nome, $rg, $cpf, $cargo, $departamento, $rua, $numero, $cep, $bairro, $cidade, $estado, $login, $id_usuario);
+    mysqli_stmt_execute($p);
+    }
     
-    header('Location: listarUsuario.php');
+}
+
+$p = mysqli_prepare($db, 'SELECT * FROM usuario WHERE id_usuario = ?');
+mysqli_stmt_bind_param($p, 's', $id_usuario);
+
+mysqli_stmt_execute($p);
+
+$result = mysqli_stmt_get_result($p);
+$usuario = mysqli_fetch_assoc($result);
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,7 +98,7 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
             <h2>Editar Usuário</h2>
         </div>
 
-        <form action="addUsuario.php" class="formulario" method="POST">
+        <form action="editarUsuario.php?id_usuario=<?=$id_usuario?>" class="formulario" method="POST">
 
             <div class="form-container">
 
@@ -88,28 +107,28 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
 
                     <div class="linha-um">
                         <span class="label-nome">Nome Completo</span>
-                        <input class="campo-nome" name="nome" type="text">
+                        <input class="campo-nome" name="nome" type="text" value="<?= $usuario['nome'] ?>">
                     </div>
 
                     <div class="linha-dois">
                         <div class="linha-dupla">
                             <span class="label">R.G</span>
-                            <input class="campo" name="rg" type="text">
+                            <input class="campo" name="rg" type="text" value="<?= $usuario['rg'] ?>">
                         </div>
                         <div class="linha-dupla">
                             <span class="label">CPF</span>
-                            <input class="campo" name="cpf" type="text">
+                            <input class="campo" name="cpf" type="text" value="<?= $usuario['cpf'] ?>">
                         </div>
                     </div>
 
                     <div class="linha-tres">
                         <div class="linha-dupla">
                             <span class="label">Cargo</span>
-                            <input class="campo" name="cargo" type="text">
+                            <input class="campo" name="cargo" type="text" value="<?= $usuario['cargo'] ?>">
                         </div>
                         <div class="linha-dupla">
                             <span class="label">Departamento</span>
-                            <input class="campo" name="departamento" type="text">
+                            <input class="campo" name="departamento" type="text" value="<?= $usuario['departamento'] ?>">
                         </div>
                     </div>
                 </div>
@@ -119,32 +138,32 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
 
                     <div class="linha-quatro">
                         <span class="label-rua">Rua</span>
-                        <input class="campo-rua" name="rua" type="text">
+                        <input class="campo-rua" name="rua" type="text" value="<?= $usuario['rua'] ?>">
                     </div>
 
                     <div class="linha-cinco">
                         <div class="linha-tripla">
                             <span class="label">Número</span>
-                            <input class="campo-triplo" name="numero" type="text">
+                            <input class="campo-triplo" name="numero" type="text" value="<?= $usuario['numero'] ?>">
                         </div>
                         <div class="linha-tripla">
                             <span class="label">CEP</span>
-                            <input class="campo-triplo" name="cep" type="text">
+                            <input class="campo-triplo" name="cep" type="text" value="<?= $usuario['cep'] ?>">
                         </div>
                         <div class="linha-tripla">
                             <span class="label">Bairro</span>
-                            <input class="campo-triplo" name="bairro" type="text">
+                            <input class="campo-triplo" name="bairro" type="text" value="<?= $usuario['bairro'] ?>">
                         </div>
                     </div>
 
                     <div class="linha-seis">
                         <div class="linha-dupla">
                             <span class="label">Cidade</span>
-                            <input class="campo" name="cidade" type="text">
+                            <input class="campo" name="cidade" type="text" value="<?= $usuario['cidade'] ?>">
                         </div>
                         <div class="linha-dupla">
                             <span class="label">Estado</span>
-                            <input class="campo" name="estado" type="text">
+                            <input class="campo" name="estado" type="text" value="<?= $usuario['estado'] ?>">
                         </div>
                     </div>
                 </div>
@@ -155,7 +174,7 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
                     <div class="linha-sete">
                         <div class="linha-dupla">
                             <span class="label">Login</span>
-                            <input class="campo" name="login" type="text">
+                            <input class="campo" name="login" type="text" value="<?= $usuario['login'] ?>">
                         </div>
                         <div class="linha-dupla">
                             <span class="label">Senha</span>
@@ -167,7 +186,7 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
             </div>
 
             <div class="user-btn">
-                <button class="submit" type="submit">Adicionar usuário</button>
+                <button class="submit" name="submit" type="submit">Atualizar usuário</button>
                 <button class="reset" type="reset">Cancelar</button>
             </div>
 
@@ -177,3 +196,4 @@ $p = mysqli_prepare( $db, 'UPDATE usuario SET nome = ?, rg = ?, cpf = ?, cargo =
 </body>
 
 </html>
+

@@ -1,6 +1,24 @@
 <?php
 session_start();
 if (!$_SESSION['idUsuario']) header("Location: index.html");
+
+if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) { } else {
+    die("Problema ao conectar ao SGDB");
+}
+
+$id_produto = $_GET['id_produto'];
+
+
+$p = mysqli_prepare($db, 'SELECT * FROM produto WHERE id_produto = ?');
+mysqli_stmt_bind_param($p, 's', $id_produto);
+
+mysqli_stmt_execute($p);
+
+$result = mysqli_stmt_get_result($p);
+$produto = mysqli_fetch_assoc($result);
+
+// var_dump($produto);
+// return;
 ?>
 
 <!DOCTYPE html>
@@ -46,26 +64,25 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
     <main class="main main-produto">
         <section class="desc-produto">
+
             <img src="" alt="">
-            <h2>Nome do produto</h2>
+            
+            <h2><?=$produto['produto']?></h2>
             <p>Preço sugerido filial:</p>
-            <span>R$</span>
-            <p>Descrição do produto em detalhes</p>
+            <span><?=$produto['preco']?></span>
+            <!-- <p>Descrição do produto em detalhes</p> -->
         </section>
 
         <section class="ingr-produto">
-            <h3>Ingredientes</h3>
-            <p>Ingredientes usados para o preparo do produto final</p>
-            <h3>Restrições</h3>
-            <p>Descrição dos ingredientes que são restrição de algumas dietas</p>
+            <h3>Descrição</h3>
+            <p><?=$produto['descricao']?></p>
+            <!-- <h3>Restrições</h3> -->
+            <!-- <p>Descrição dos ingredientes que são restrição de algumas dietas</p> -->
+            <button>Editar</button>
+            <button>Excluir</button>
         </section>
     </main>
 
-    <footer class="footer footer-bg">
-        <div class="parag">
-            <p>O Donuts do Homer - © Todos os direitos reservados</p>
-        </div>
-    </footer>
 
 </body>
 
