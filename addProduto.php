@@ -9,7 +9,7 @@ $preco = $_POST['preco'];
 $categoria = $_POST['categoria'];
 $descricao = $_POST['descricao'];
 
-if( $db = mysqli_connect('localhost','root','','donutsh',3307) ){
+if( $db = mysqli_connect('localhost','root','','donutsh',3306) ){
 } else {
 	die("Problema ao conectar ao SGDB");
 }
