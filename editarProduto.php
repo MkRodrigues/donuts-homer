@@ -26,7 +26,7 @@ mysqli_stmt_execute($p);
 
 header('location:listarProdutos.php');
 
-<body class="estrutura">
+
 
 }
 
