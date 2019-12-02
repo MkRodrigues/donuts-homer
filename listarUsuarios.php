@@ -59,9 +59,11 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                 <thead>
                     <tr>
                         <!-- <th class="checkbox"><input type="checkbox"></th> -->
+                        <th class="rotulo">Ações</th>
+
                         <th class="rotulo">Id</th>
                         <th class="rotulo">Login</th>
-                        <th class="rotulo">Nome Completo</th>
+                        <th class="rotulo">Nome</th>
                         <th class="rotulo">R.G</th>
                         <th class="rotulo">CPF</th>
                         <th class="rotulo">Cargo</th>
@@ -72,7 +74,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         <th class="rotulo">Bairro</th>
                         <th class="rotulo">Cidade</th>
                         <th class="rotulo">Estado</th>
-                        <th class="rotulo">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -93,6 +94,10 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         ?>
 
                         <tr class="row">
+                            <td>
+                                <a href="editarUsuario.php?id_usuario=<?= $usuario['id_usuario'] ?>"><img class="icones" src="image/edit1.png" alt=""></a>
+                                <a href="excluirUsuario.php?id_usuario=<?= $usuario['id_usuario'] ?>"><img class="icones" src="image/delete1.png" alt=""></a>
+                            </td>
                             <td><?= $usuario['id_usuario'] ?></td>
                             <td><?= $usuario['login'] ?></td>
                             <td><?= $usuario['nome'] ?></td>
@@ -106,10 +111,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                             <td><?= $usuario['bairro'] ?></td>
                             <td><?= $usuario['cidade'] ?></td>
                             <td><?= $usuario['estado'] ?></td>
-                            <td>
-                                <a href="editarUsuario.php?id_usuario=<?= $usuario['id_usuario'] ?>"><img class="icones" src="image/edit.png" alt=""></a>
-                                <a href="excluirUsuario.php?id_usuario=<?= $usuario['id_usuario'] ?>"><img class="icones" src="image/delete.png" alt=""></a>
-                            </td>
+
 
                         </tr>
 

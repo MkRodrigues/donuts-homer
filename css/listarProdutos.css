@@ -10,19 +10,24 @@
 .main-h2 {
     font-size: 3.5em;
     color: #e69;
-    margin: 70px 0px 150px 30px;
+    margin: 70px 0px 70px 30px;
+    font-weight: 300;
+}
+
+.botoes {
+    float: right;
+    margin: 0 0 20px 0;
 }
 
 .btn-produtos {
     font-size: 1.1em;
     width: 200px;
     height: 50px;
-    background: #08c008;
+    background: #1c1;
     color: white;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    margin: auto 0;
 }
 
 .tabela-produtos {
@@ -31,17 +36,18 @@
 
 .tabela {
     width: 100%;
-     border-spacing: 0;
-
+    border-spacing: 0;
 }
 
 th{
-    padding: 30px 0;
+    padding: 25px 0;
+    background: #e69;
+    border-bottom: 10px solid rgb(212, 105, 144);
 }
 
 td {
     padding: 5px;
-    color: #e69;
+    color: #5f5f5f;
     text-align: center;
     width: 400px;
     background: #fafafa;
@@ -52,7 +58,7 @@ td {
 
 .rotulo {
     font-size: 1.1em;
-    color: #e69;
+    color: white;
 }
 
 .icones {

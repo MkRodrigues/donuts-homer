@@ -130,6 +130,7 @@ Fonte Secundária - Rock Salt -  font-family: 'Rock Salt', cursive; (Logo)
     position: fixed;
     width: 130px;
     justify-content: center;
+    z-index: 1;
 }
 
 .menu-lateral {

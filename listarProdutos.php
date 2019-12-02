@@ -57,12 +57,13 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                 <thead>
                     <tr>
                         <!-- <th class="checkbox"><input type="checkbox"></th> -->
+                        <th class="rotulo">Ações</th>
+
                         <th class="rotulo">Id</th>
                         <th class="rotulo">Produto</th>
                         <th class="rotulo">Código</th>
                         <th class="rotulo">R$</th>
                         <th class="rotulo">Descrição</th>
-                        <th class="rotulo">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,15 +85,16 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                         <tr class="row">
                             <!-- <td><input name="checkProd" type="checkbox"></td> -->
+                            <td>
+                                <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/edit1.png" alt=""></a>
+                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/delete1.png" alt=""></a>
+                            </td>
                             <td><?= $produto['id_produto'] ?></td>
                             <td><?= $produto['produto'] ?></td>
                             <td><?= $produto['codigo'] ?></td>
                             <td><?= $produto['preco'] ?></td>
                             <td><?= $produto['descricao'] ?></td>
-                            <td>
-                                <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/edit.png" alt=""></a>
-                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/delete.png" alt=""></a>
-                            </td>
+                            
 
                         </tr>
 
