@@ -43,6 +43,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
             </ul>
         </nav>
     </header>
+    
     <main class="main">
         <h2 class="main-h2">Produtos</h2>
 
@@ -56,9 +57,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                 <thead>
                     <tr>
-                        <!-- <th class="checkbox"><input type="checkbox"></th> -->
                         <th class="rotulo">Ações</th>
-
                         <th class="rotulo">Id</th>
                         <th class="rotulo">Produto</th>
                         <th class="rotulo">Código</th>
@@ -84,7 +83,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         ?>
 
                         <tr class="row">
-                            <!-- <td><input name="checkProd" type="checkbox"></td> -->
                             <td>
                                 <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/edit1.png" alt=""></a>
                                 <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/delete1.png" alt=""></a>
@@ -95,7 +93,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                             <td><?= $produto['preco'] ?></td>
                             <td><?= $produto['descricao'] ?></td>
                             
-
                         </tr>
 
                     <?php

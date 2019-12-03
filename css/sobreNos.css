@@ -1,30 +1,13 @@
 @import url("estilo.css");
 
-/* ---------->>> MAIN <<<-----------*/
-
-.main-logo {
-    display: flex;
-    justify-content: center;
-}
-.sobre-logo {
-    width: 195px;
-    margin: 100px 0px 50px 0;
-}
-
-/* ---------->>> INTRO / HISTÓRIA <<<-----------*/
+/* ---------->>> INTRO <<<-----------*/
 
 .cima-container {
     display: flex;
-    /* width: 90%; */
-    /* margin: 0 auto; */
-    /* justify-content: space-between; */
-    /* align-content: center; */
 }
 
 .intro-container {
-/* background: black; */
     padding: 50px 90px;
-    /* width: 40%; */
 }
 
 .intro-container h2 {
@@ -34,18 +17,18 @@
     padding-bottom: 15px;
 }
 
-.intro-container p {
+.intro-p {
     font-size: 1em;
     font-weight: 300;
     text-align: right;
     line-height: 1.3;
 }
 
+/* ---------->>> HISTÓRIA <<<-----------*/
+
 .historia-container {
     background: #e69;
     padding: 50px 90px;
-
-    /* width: 40%; */
 }
 
 .historia-container h2 {
@@ -55,18 +38,16 @@
     padding-bottom: 15px;
 }
 
-.historia-container p {
+.hist-p{
     font-weight: 300;
     color: white;
     line-height: 1.3;
 }
 
-
 /* ---------->>> MISSÃO / VISÃO / VALORES <<<-----------*/
 
 .baixo-container {
     display: flex;
-    /* background: rgb(0, 0, 0); */
     background: rgb(245, 242, 242);
     height: 500px;
     align-items: center;
@@ -76,19 +57,36 @@
     padding: 30px;
 }
 
-.visao-container {
-    padding: 30px;
+.missao-img, .visao-img, .valores-img {
+    width: 35px;
+    display: block;
+    margin: 0 auto;
 }
 
-.valores-container {
-    padding: 30px;
+.missao-container h2, .visao-container h2, .valores-container h2 {
+    padding: 10px 0;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.missao-container p, .visao-container p, .valores-container p {
+    text-align: center;
+    font-size: 1.5;
+    font-weight: 300;
+    line-height: 1.5; 
 }
 
 .visao-container {
+    padding: 30px;
     background: url("../image/visao.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 1;
+}
+
+.visao-container h2, .visao-container p{
+    color: #ffffff;
     z-index: 1;
 }
 
@@ -103,30 +101,8 @@
     z-index: -1;
 } 
 
-.missao-img, .visao-img, .valores-img {
-    width: 35px;
-    display: block;
-    margin: 0 auto;
-}
-
-
-.missao-container h2, .visao-container h2, .valores-container h2 {
-    padding: 10px 0;
-    font-size: 1.7em;
-    text-align: center;
-
-}
-
-.missao-container p, .visao-container p, .valores-container p {
-    text-align: center;
-    font-size: 1.5;
-    font-weight: 300;
-    line-height: 1.5; 
-}
-
-.visao-container p, .visao-container h2 {
-    color: #ffffff;
-    z-index: 1;
+.valores-container {
+    padding: 30px;
 }
 
 /* ---------->>> NOSSO TIME <<<-----------*/
@@ -136,16 +112,14 @@
     width: 90%;
     height: 700px;
     flex-direction: column;
-    /* align-self: center; */
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-.info-img {
-    display: block;
-    width: 160px;
-    height: 130px;
+.nt-titulo {
+    font-size: 3em;
+    padding-bottom: 50px ;
 }
 
 .func-container {
@@ -157,6 +131,20 @@
     display: flex;
     background: rgb(245, 242, 242);
     justify-content: space-between;
+}
+
+.infoImg-container p {
+    font-weight: 300;
+    font-size: 1.1em;
+    text-align: center;
+    margin: auto 0;
+    padding: 0 45px ;
+}
+
+.info-img {
+    display: block;
+    width: 160px;
+    height: 130px;
 }
 
 .pf-titulo {
@@ -171,25 +159,11 @@
     font-weight: 300;
 }
 
-.infoImg-container p {
-    font-weight: 300;
-    font-size: 1.1em;
-    text-align: center;
-    margin: auto 0;
-    padding: 0 45px ;
-}
-
-.nt-titulo {
-    font-size: 3em;
-    padding-bottom: 50px ;
-}
-
 /* ---------->>> REDES SOCIAIS <<<-----------*/
 
 .redesSociais-container {
     display: flex;
     justify-content: space-between;
-    /* align-content: center; */
 }
 
 .redes-sociais {
@@ -207,6 +181,10 @@
     padding: 0 50px; 
 }
 
+.siga-nos span {
+    font-weight: 400;
+}
+
 .rs-img {
     width: 30px;
     padding: 0 15px;
@@ -222,8 +200,4 @@
     height: 100px;
     display: block;
     margin: 0 auto;
-}
-
-.siga-nos span {
-    font-weight: 400;
 }

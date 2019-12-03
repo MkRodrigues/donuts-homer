@@ -75,30 +75,16 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         <img class="donut-img" src="image/donut1.jpg" alt="Imagem do Produto">
                         
                         <a href="produtoView.php?id_produto=<?=$produto['id_produto']?>"><h3><?=$produto["produto"]?></h3></a>
-<!-- Esse cod vai dentro do link -->
-                        <!-- editarUsuario.php?id_usuario=<?//=$id_usuario?> -->
+
                     </div>
 
                 <?php
                 }
                 ?>
 
-                <!-- <div class="produto">
-                    <img class="donut-img" src="image/donut1.jpg" alt="Imagem do Produto">
-                    <h3>Produto 1</h3>
-                </div> -->
-
             </div>
 
         </section>
-
-        <!-- <section class="frase-efeito">
-
-            <div>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="f-backgroung"></div>
-        </section> -->
 
     </main>
 

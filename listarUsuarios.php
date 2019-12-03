@@ -58,9 +58,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                 <thead>
                     <tr>
-                        <!-- <th class="checkbox"><input type="checkbox"></th> -->
                         <th class="rotulo">Ações</th>
-
                         <th class="rotulo">Id</th>
                         <th class="rotulo">Login</th>
                         <th class="rotulo">Nome</th>

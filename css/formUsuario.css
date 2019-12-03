@@ -6,6 +6,8 @@
     width: 90.9%;
 }
 
+/* ---------->>> CADASTRO/FORMULÁRIO <<<-----------*/
+
 .cadastro-user {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +60,22 @@
     margin-bottom: 10px;
 }
 
+.linha-dois, .linha-tres, .linha-seis, .linha-cinco, .linha-sete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linha-dupla, .linha-tripla{
+    display: flex;
+}
+
+.label{
+    padding: 12px;
+    border-radius: 5px 0 0px 5px;
+    background: #dbdbdb;
+    color: #5f5f5f;
+}
+
 .label-nome{
     width: 150px;
     padding: 12px;
@@ -81,22 +99,6 @@
     width: 100%;
     border-radius: 0 5px 5px 0;
     border: 1px solid #dbdbdb;
-}
-
-.linha-dois, .linha-tres, .linha-seis, .linha-cinco, .linha-sete {
-    display: flex;
-    justify-content: space-between;
-}
-
-.linha-dupla, .linha-tripla{
-    display: flex;
-}
-
-.label{
-    padding: 12px;
-    border-radius: 5px 0 0px 5px;
-    background: #dbdbdb;
-    color: #5f5f5f;
 }
 
 .campo {

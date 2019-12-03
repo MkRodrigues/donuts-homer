@@ -6,6 +6,8 @@
     width: 91%;
 }
 
+/* ---------->>> CADASTRO/FORMULÁRIO <<<-----------*/
+
 .cadastro-prod {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +35,6 @@
     position: absolute;
     top: 100px;
     background: #fff;
-    /* border: 1px solid black; */
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.5)
 }
 
@@ -57,6 +58,11 @@
     margin-bottom: 15px;
 }
 
+.linha-tres {
+    display: flex;
+    justify-content: space-between;
+}
+
 .linha-dupla {
     display: flex;
 }
@@ -68,15 +74,14 @@
     color: #5f5f5f;
 }
 
+.campo {
+    color: #5f5f5f;
+    font-size: 1em;
+}
+
 .campo, .campo-dois, .campo-quatro {
     border: 1px solid #dbdbdb;
     border-radius: 0 5px 5px 0;
-}
-
-.campo {
-    /* font-family: 'Ubuntu', sans-serif; */
-    color: #5f5f5f;
-    font-size: 1em;
 }
 
 .campo-dois, .campo-quatro {
@@ -86,11 +91,6 @@
     text-align: left;
     padding-left: 10px;
     width: 100%;
-}
-
-.linha-tres {
-    display: flex;
-    justify-content: space-between;
 }
 
 .submit, .reset {

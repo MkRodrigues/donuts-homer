@@ -26,7 +26,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
         </div>
 
         <div class="barra-info">
-            <h2><?= $_SESSION['nome']?></h2>
+            <h2><?= $_SESSION['nome'] ?></h2>
             <a href="./sair.php"><img class="icone-barra" src="image/exit.png" alt=""></a>
         </div>
 
@@ -111,12 +111,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
             </div>
         </section>
     </main>
-
-    <!-- <footer class="footer footer-bg">
-        <div class="parag">
-            <p>O Donuts do Homer - © Todos os direitos reservados</p>
-        </div>
-    </footer> -->
 
 </body>
 

@@ -147,12 +147,11 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                 <h3 class="pf-titulo">Mikael <span>Assis</span></h3>
             </div>
 
-
         </section>
 
         <section class="redesSociais-container">
             <div class="redes-sociais">
-                <h2 class="siga-nos">Siga-nos <span>Donuts</span></h2>
+                <h2 class="siga-nos">Siga-nos<span>Donuts</span></h2>
                 <div class="sociais-img">
                     <img class="rs-img" src="image/face.png" alt="Facebook">
                     <img class="rs-img" src="image/linkedin.png" alt="LinkedIn">

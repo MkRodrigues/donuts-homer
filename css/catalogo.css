@@ -7,8 +7,10 @@
     left: 150px;
     top: 80px;
     width: 89%;
-    /* border: 1px solid black; */
 }
+
+/* ---------->>> INTRO/PRODUTOS <<<-----------*/
+
 
 .intro-catalogo {
     width: 100%;
@@ -41,6 +43,11 @@
     justify-content: center;
 }
 
+.donut-img {
+    display: block;
+    width: 200px;
+}
+
 .produto h3 {
     font-size: 1em;
     text-align: center;
@@ -51,10 +58,4 @@
     margin-top: 10px;
     font-weight: 300;
     width: 230px;
-}
-
-
-.donut-img {
-    display: block;
-    width: 200px;
 }
