@@ -43,7 +43,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
             </ul>
         </nav>
     </header>
-    
+
     <main class="main">
         <h2 class="main-h2">Produtos</h2>
 
@@ -92,18 +92,17 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                             <td><?= $produto['codigo'] ?></td>
                             <td><?= $produto['preco'] ?></td>
                             <td><?= $produto['descricao'] ?></td>
-                            
+
                         </tr>
 
                         <script>
                             function deletarFunction() {
-                            var r = confirm("Quer mesmo Deletar?");
-                            if (r == false) {
-                                        return false;
-                                                            } 
-
-                                                            }
-                                        </script>
+                                var r = confirm("Quer mesmo Deletar?");
+                                if (r == false) {
+                                    return false;
+                                }
+                            }
+                        </script>
                     <?php
                     }
                     ?>

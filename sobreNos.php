@@ -102,9 +102,6 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                     nossos
                     clientes, nossa melhor experiência</p>
 
-                <div class="visao-sobrepor">
-                    <!-- Div de sobreposição de Visão -->
-                </div>
             </section>
 
             <section class="valores-container">

@@ -26,4 +26,4 @@ $p = mysqli_prepare( $db, 'INSERT usuario(nome, rg, cpf, cargo, departamento, ru
     mysqli_stmt_bind_param($p, 'ssssssissssss' ,$nome, $rg, $cpf, $cargo, $departamento, $rua, $numero, $cep, $bairro, $cidade, $estado, $login, $senha);
     mysqli_stmt_execute($p);
     
-    header('Location: catalogo.php');
+    header('Location: listarUsuarios.php');

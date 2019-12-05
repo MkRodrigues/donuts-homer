@@ -69,20 +69,20 @@ $produto = mysqli_fetch_assoc($result);
 
             <div class="produto-container">
                 <div class="produto-info">
-                    <h2><?= $produto['produto']?></h2>
+                    <h2><?= $produto['produto'] ?></h2>
 
                     <div class="linha">
                         <p class="label">Preço:</p>
-                        <span class="campo">R$ <?= $produto['preco']?></span>
+                        <span class="campo">R$ <?= $produto['preco'] ?></span>
                     </div>
 
                     <h3 class="label">Descrição:</h3>
-                    <p class="descricao"><?= $produto['descricao']?></p>
+                    <p class="descricao"><?= $produto['descricao'] ?></p>
                 </div>
 
                 <div class="produto-btn">
                     <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>" class="btn-editar">Editar</a>
-                    <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>" class="btn-excluir">Excluir</a>
+                    <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>" class="btn-excluir" onclick="return deletarFunction()">Excluir</a>
                 </div>
             </div>
 
@@ -91,21 +91,14 @@ $produto = mysqli_fetch_assoc($result);
         </section>
 
     </main>
-
+    <script>
+        function deletarFunction() {
+            var r = confirm("Quer mesmo Deletar?");
+            if (r == false) {
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
-
-<!-- <section class="desc-produto">
-            <img src="" alt="">
-            <h2><?= $produto['produto'] ?></h2>
-            <p>Preço sugerido filial:</p>
-            <span><?= $produto['preco'] ?></span>
-        </section>
-
-        <section class="ingr-produto">
-            <h3>Descrição</h3>
-            <p><?= $produto['descricao'] ?></p>
-            <button>Editar</button>
-            <button>Excluir</button>
-        </section> -->

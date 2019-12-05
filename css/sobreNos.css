@@ -78,7 +78,7 @@
 
 .visao-container {
     padding: 30px;
-    background: url("../image/visao.jpg");
+    background: url("../image/visaoescuro.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,17 +89,6 @@
     color: #ffffff;
     z-index: 1;
 }
-
-.visao-sobrepor {
-    content: "";
-    position: absolute;
-    top: 436px;
-    left: 382px;
-    width: 474px;
-    height: 363px;
-    background: rgba(0, 0, 0, 0.60);
-    z-index: -1;
-} 
 
 .valores-container {
     padding: 30px;
