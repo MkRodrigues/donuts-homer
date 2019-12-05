@@ -84,7 +84,7 @@ $usuario = mysqli_fetch_assoc($result);
     <header class="header header-bg">
         <nav class="menu-lateral">
             <ul class="menu-ul">
-                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Home</a></li>
+                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Intranet</a></li>
                 <li><a href="sobreNos.php"><img class="icone" src="image/about.png" alt="">Sobre <br> Nós</a></li>
                 <li><a href="catalogo.php"><img class="icone" src="image/nomear.png" alt="">Catálogo</a></li>
                 <li><a href="listarProdutos.php"><img class="icone" src="image/list.png" alt="">Produtos</a></li>
@@ -187,7 +187,7 @@ $usuario = mysqli_fetch_assoc($result);
 
             <div class="user-btn">
                 <button class="submit" name="submit" type="submit">Atualizar usuário</button>
-                <button class="reset" type="reset">Cancelar</button>
+                <a class="reset" href="listarUsuarios.php">Cancelar</a>
             </div>
 
         </form>

@@ -50,7 +50,7 @@ $produto = mysqli_fetch_assoc($result);
     <header class="header header-bg">
         <nav class="menu-lateral">
             <ul class="menu-ul">
-                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Home</a></li>
+                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Intranet</a></li>
                 <li><a href="sobreNos.php"><img class="icone" src="image/about.png" alt="">Sobre <br> Nós</a></li>
                 <li><a href="catalogo.php"><img class="icone" src="image/nomear.png" alt="">Catálogo</a></li>
                 <li><a href="listarProdutos.php"><img class="icone" src="image/list.png" alt="">Produtos</a></li>
@@ -60,27 +60,52 @@ $produto = mysqli_fetch_assoc($result);
     </header>
 
     <main class="main main-produto">
-        <section class="desc-produto">
 
+        <section class="container-produto">
+
+            <div class="produto-img">
+                <img class="img" src="image/donut.png" alt="">
+            </div>
+
+            <div class="produto-container">
+                <div class="produto-info">
+                    <h2><?= $produto['produto']?></h2>
+
+                    <div class="linha">
+                        <p class="label">Preço:</p>
+                        <span class="campo">R$ <?= $produto['preco']?></span>
+                    </div>
+
+                    <h3 class="label">Descrição:</h3>
+                    <p class="descricao"><?= $produto['descricao']?></p>
+                </div>
+
+                <div class="produto-btn">
+                    <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>" class="btn-editar">Editar</a>
+                    <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>" class="btn-excluir">Excluir</a>
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+
+<!-- <section class="desc-produto">
             <img src="" alt="">
-
             <h2><?= $produto['produto'] ?></h2>
             <p>Preço sugerido filial:</p>
             <span><?= $produto['preco'] ?></span>
-            <!-- <p>Descrição do produto em detalhes</p> -->
         </section>
 
         <section class="ingr-produto">
             <h3>Descrição</h3>
             <p><?= $produto['descricao'] ?></p>
-            <!-- <h3>Restrições</h3> -->
-            <!-- <p>Descrição dos ingredientes que são restrição de algumas dietas</p> -->
             <button>Editar</button>
             <button>Excluir</button>
-        </section>
-    </main>
-
-
-</body>
-
-</html>
+        </section> -->

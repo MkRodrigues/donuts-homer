@@ -1,1 +1,93 @@
 @import url("estilo.css");
+
+/* ---------->>> MAIN <<<-----------*/
+
+.main {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+} 
+
+/* ---------->>> PRODUTO <<<-----------*/
+
+.container-produto {
+    display: flex;
+    align-items: center;
+}
+
+.produto-img {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 45%;
+}
+
+.produto-container {
+    width: 800px;
+    background: #fafafa;
+}
+
+.produto-info {
+    padding: 50px;
+    border-bottom: 4px solid white;
+}
+
+.produto-info h2 {
+    font-size: 2em;
+    color: #e69;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.linha {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.label {
+    color: #e69;
+    font-size: 1.3em;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+.campo {
+    font-weight: 300;
+}
+
+.descricao {
+    padding-left: 30px;
+    padding-top: 5px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.produto-btn {
+    margin: 30px 20px 30px 0;
+    text-align: right;
+}
+
+.btn-editar {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    background: #1d1;
+    border-radius: 7px 0 0 7px;
+}
+
+.btn-excluir {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    background: #f00;
+    border-radius: 0 7px 7px 0;
+}

@@ -142,10 +142,12 @@
     color: white;
     background: #1c1;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .reset {
     border-radius: 0 5px 5px 0;
     color: white;
+    cursor: pointer;
     background: red;
 }

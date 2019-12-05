@@ -19,15 +19,12 @@ if ($db = mysqli_connect('localhost', 'root', '', 'donutsh', 3306)) { } else {
 
 if (!empty($codigo)) {
 
-$p = mysqli_prepare($db, 'UPDATE produto SET codigo = ?, produto = ?, preco = ?, categoria = ?, descricao = ? WHERE id_produto = ?');
+    $p = mysqli_prepare($db, 'UPDATE produto SET codigo = ?, produto = ?, preco = ?, categoria = ?, descricao = ? WHERE id_produto = ?');
 
-mysqli_stmt_bind_param($p, 'sssssi', $codigo, $produto, $preco, $categoria, $descricao, $id_produto);
-mysqli_stmt_execute($p);
+    mysqli_stmt_bind_param($p, 'sssssi', $codigo, $produto, $preco, $categoria, $descricao, $id_produto);
+    mysqli_stmt_execute($p);
 
-header('location:listarProdutos.php');
-
-
-
+    header('location:listarProdutos.php');
 }
 
 $p = mysqli_prepare($db, 'SELECT * FROM produto WHERE id_produto = ?');
@@ -72,7 +69,7 @@ $produto = mysqli_fetch_assoc($result);
     <header class="header header-bg">
         <nav class="menu-lateral">
             <ul class="menu-ul">
-                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Home</a></li>
+                <li><a href="intranet.php"><img class="icone" src="image/home.png" alt="">Intranet</a></li>
                 <li><a href="sobreNos.php"><img class="icone" src="image/about.png" alt="">Sobre <br> Nós</a></li>
                 <li><a href="catalogo.php"><img class="icone" src="image/nomear.png" alt="">Catálogo</a></li>
                 <li><a href="listarProdutos.php"><img class="icone" src="image/list.png" alt="">Produtos</a></li>
@@ -87,7 +84,7 @@ $produto = mysqli_fetch_assoc($result);
             <h2>Editar Produto</h2>
         </div>
 
-        <form action="editarProduto.php?id_produto=<?=$id_produto?>" method="POST" class="formulario">
+        <form action="editarProduto.php?id_produto=<?= $id_produto ?>" method="POST" class="formulario">
             <div class="form-container">
 
                 <div class="prod-form">
@@ -98,29 +95,29 @@ $produto = mysqli_fetch_assoc($result);
 
                     <div class="linha-dois">
                         <span class="label">Produto</span>
-                        <input class="campo-dois" name="produto" type="text" value="<?=$produto['produto']?>">
+                        <input class="campo-dois" name="produto" type="text" value="<?= $produto['produto'] ?>">
                     </div>
 
                     <div class="linha-tres">
                         <div class="linha-dupla">
                             <span class="label">Preço Unitário</span>
-                            <input class="campo" name="preco" type="text" value="<?=$produto['preco']?>">
+                            <input class="campo" name="preco" type="text" value="<?= $produto['preco'] ?>">
                         </div>
                         <div class="linha-dupla">
                             <span class="label">Categoria</span>
-                            <input class="campo" name="categoria" type="text" value="<?=$produto['categoria']?>">
+                            <input class="campo" name="categoria" type="text" value="<?= $produto['categoria'] ?>">
                         </div>
                     </div>
 
                     <div class="linha-quatro">
                         <span class="label">Descrição</span>
-                        <textarea class="campo-quatro" name="descricao" rows="4" class="descricao"><?=$produto['descricao']?></textarea>
+                        <textarea class="campo-quatro" name="descricao" rows="4" class="descricao"><?= $produto['descricao'] ?></textarea>
                     </div>
                 </div>
 
                 <div class="prod-btn">
                     <button class="submit" type="submit" name="submit">Atualizar produto</button>
-                    <button class="reset" type="reset">Cancelar</button>
+                    <a class="reset" href="listarProdutos.php">Cancelar</a>
                 </div>
             </div>
         </form>
