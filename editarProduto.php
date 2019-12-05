@@ -116,10 +116,20 @@ $produto = mysqli_fetch_assoc($result);
                 </div>
 
                 <div class="prod-btn">
-                    <button class="submit" type="submit" name="submit">Atualizar produto</button>
-                    <a class="reset" href="listarProdutos.php">Cancelar</a>
+                    <button onclick="return atualizarFunction()" class="submit" type="submit" name="submit">Atualizar produto</button>
+                    <a href="listarProdutos.php" class="reset" type="reset">Cancelar</a>
                 </div>
             </div>
+
+             <script>
+                            function atualizarFunction() {
+                            var r = confirm("Quer mesmo atualizar?");
+                            if (r == false) {
+                                        return false;
+                                                            } 
+
+                                                            }
+                                        </script>
         </form>
 
     </main>

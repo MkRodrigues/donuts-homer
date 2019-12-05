@@ -85,7 +85,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                         <tr class="row">
                             <td>
                                 <a href="editarProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/edit1.png" alt=""></a>
-                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" src="image/delete1.png" alt=""></a>
+                                <a href="excluirProduto.php?id_produto=<?= $produto['id_produto'] ?>"><img class="icones" onclick="return deletarFunction()" src="image/delete1.png" alt=""></a>
                             </td>
                             <td><?= $produto['id_produto'] ?></td>
                             <td><?= $produto['produto'] ?></td>
@@ -95,6 +95,15 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
                             
                         </tr>
 
+                        <script>
+                            function deletarFunction() {
+                            var r = confirm("Quer mesmo Deletar?");
+                            if (r == false) {
+                                        return false;
+                                                            } 
+
+                                                            }
+                                        </script>
                     <?php
                     }
                     ?>

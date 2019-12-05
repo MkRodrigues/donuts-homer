@@ -186,9 +186,21 @@ $usuario = mysqli_fetch_assoc($result);
             </div>
 
             <div class="user-btn">
-                <button class="submit" name="submit" type="submit">Atualizar usuário</button>
-                <a class="reset" href="listarUsuarios.php">Cancelar</a>
+                <button onclick="return atualizarFunction()"  class="submit" name="submit" type="submit">Atualizar usuário</button>
+                <a href="listarUsuarios.php" class="reset" type="reset">Cancelar</a>
             </div>
+
+
+            <script>
+                            function atualizarFunction() {
+                            var r = confirm("Quer mesmo atualizar?");
+                            if (r == false) {
+                                        return false;
+                                                            } 
+
+                                                            }
+                                        </script>
+
 
         </form>
     </main>
