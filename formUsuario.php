@@ -138,7 +138,9 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
             <div class="user-btn">
                 <button class="submit" type="submit">Adicionar usuário</button>
-                <button class="reset" type="reset">Cancelar</button>
+                <a class="reset" href="listarUsuarios.php">Cancelar</a>
+
+                <!-- <button class="reset" type="reset">Cancelar</button> -->
             </div>
 
         </form>

@@ -83,7 +83,7 @@ if (!$_SESSION['idUsuario']) header("Location: index.html");
 
                 <div class="prod-btn">
                     <button class="submit" type="submit">Adicionar produto</button>
-                    <button class="reset" type="reset">Cancelar</button>
+                    <a class="reset" href="listarProdutos.php">Cancelar</a>
                 </div>
             </div>
         </form>
